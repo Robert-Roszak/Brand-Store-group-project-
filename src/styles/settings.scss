@@ -14,6 +14,7 @@ $hover-animationType: shake;
 
 $color-tigersEye: #D58E32;
 $color-CharlestonGreen: #2a2a2a;
+$color-CharlestonGreen-opaque: rgba(42, 42, 42, 0.7);
 $color-jet: #363636;
 $color-PhilippineSilver: #b6b6b6;
 $color-LavenderBlush: #fcf3f8;
@@ -138,6 +139,7 @@ $menuBar-boxShadow: $color-black;
 
 // top bar
 $topBar-background: $color-CharlestonGreen;
+$topBar-list-background-onHover: $color-CharlestonGreen-opaque;
 $topBar-text: $color-ChineseWhite;
 $topBar-text--hover: $color-tigersEye;
 

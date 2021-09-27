@@ -16,11 +16,31 @@ const TopBar = () => (
               <button type='button'>
                 USD <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
               </button>
+              <ul className={styles.secondaryList}>
+                <li>
+                  <button type='button'>
+                    PLN <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
+                  </button>
+                </li>
+                <li>
+                  <button type='button'>
+                    EUR <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
+                  </button>
+                </li>
+              </ul>
             </li>
             <li>
               <button type='button'>
                 English <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
               </button>
+              <ul className={styles.secondaryList}>
+                <li>
+                  <button type='button'>
+                    Polish{' '}
+                    <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
+                  </button>
+                </li>
+              </ul>
             </li>
             <li>
               <button type='button'>
