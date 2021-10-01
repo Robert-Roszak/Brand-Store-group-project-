@@ -7,14 +7,20 @@ import { faCaretDown, faUser, faLock, faBars } from '@fortawesome/free-solid-svg
 import styles from './TopBar.module.scss';
 import { Link, NavLink } from 'react-router-dom';
 
-const TopBar = ({ languageFromContainer, changeLanguage }) => {
-  const [language, setLanguage] = useState('English');
-  const [currency, setCurrency] = useState('EUR');
+const TopBar = ({
+  languageFromContainer,
+  changeLanguage,
+  currencyFromContainer,
+  changeCurrency,
+}) => {
+  const [language, setLanguage] = useState('');
+  const [currency, setCurrency] = useState('');
 
-  console.log('languageFromContainer: ', languageFromContainer);
-  console.log('language: ', language);
+  // console.log('languageFromContainer: ', languageFromContainer);
+  // console.log('language: ', language);
 
-  if (language) changeLanguage(language);
+  if (language !== languageFromContainer) changeLanguage(language);
+  if (currency !== currencyFromContainer) changeCurrency(currency);
 
   return (
     <div className={styles.root}>
@@ -103,10 +109,12 @@ const TopBar = ({ languageFromContainer, changeLanguage }) => {
 TopBar.propTypes = {
   language: PropTypes.string,
   currency: PropTypes.string,
+  languageFromContainer: PropTypes.string,
+  currencyFromContainer: PropTypes.string,
   setLanguage: PropTypes.func,
   setCurrency: PropTypes.func,
   changeLanguage: PropTypes.func,
-  languageFromContainer: PropTypes.node,
+  changeCurrency: PropTypes.func,
 };
 
 export default TopBar;
